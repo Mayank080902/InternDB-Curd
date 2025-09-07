@@ -4,12 +4,9 @@ import psycopg2
 from psycopg2 import sql
 from psycopg2.extras import DictCursor
 
-# Initialize the Flask application
 app = Flask(__name__)
 
 # --- Database Connection ---
-# IMPORTANT: Update this line with your actual PostgreSQL connection string.
-# Example: 'postgresql://your_username:your_password@localhost:5432/internDB'
 DATABASE_URL = os.environ.get('DATABASE_URL', 'postgresql://postgres:080902@localhost:5432/InternDB')
 
 def get_db_connection():
@@ -226,3 +223,4 @@ def delete_student(student_id):
 # Main entry point to run the app
 if __name__ == '__main__':
     app.run(debug=True)
+
